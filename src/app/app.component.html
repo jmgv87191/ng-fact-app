@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="card border-primary mb-3">
+    <div class="card-header text-center"> <h2>Ejemplo factura</h2> </div>
+    <div class="card-body">
+
+      <ul class="list-group">
+
+        <app-invoice [id]="invoice.id" [name]="invoice.name" ></app-invoice>
+
+      </ul>
+
+      <ul class="list-group mt-2">
+
+        <app-client-view [client]="invoice.client" ></app-client-view>
+
+      </ul>
+
+      <ul class="list-group mt-2">
+
+        <app-company-view [company]="invoice.company" ></app-company-view>
+
+      </ul>
+
+      <ul class="list-group mt-2">
+
+        <app-list [items]="invoice.items" class="lista" (removeEventEmitter)="removeItem($event)" ></app-list>
+
+        <app-total [total]="invoice.total" ></app-total>
+
+        <app-form-item (addItemEventEmitter)="addItem($event)" ></app-form-item>
+
+      </ul>
+
+
+
+
+
+
+    </div>
+  </div>
+
+</div>
+

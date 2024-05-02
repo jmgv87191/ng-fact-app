@@ -1,0 +1,15 @@
+<li class="list-group-item list-group-item-action active text-center">
+    Datos del Cliente
+</li>
+
+<li class="list-group-item list-group-item-light d-flex justify-content-between align-items-center">
+    {{ client.name }}  {{ client.lastname }}
+</li>
+
+<li class="list-group-item list-group-item-light d-flex justify-content-between align-items-center">
+    {{ client.address.country }}  /  {{ client.address.city }} 
+</li>
+
+<li class="list-group-item list-group-item-light d-flex justify-content-between align-items-center">
+    {{ client.address.street }} {{client.address.number }}
+</li>
